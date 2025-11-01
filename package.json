@@ -1,0 +1,63 @@
+{
+  "name": "bigscreen",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@antv/g2": "^5.2.3",
+    "dayjs": "^1.11.19",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.2.6",
+    "storejs": "^2.1.0",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-html": "^8.1.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-unused-imports": "^4.1.3",
+    "eslint-plugin-vue": "^9.23.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
+    "msw": "^2.3.5",
+    "postcss": "^8.4.41",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.81.0",
+    "sass-loader": "^16.0.3",
+    "stylelint": "^16.8.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^6.0.4",
+    "tailwindcss": "^3.4.10",
+    "tailwindcss-px-to-viewport": "^0.1.3",
+    "vite": "^5.3.1",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+}

@@ -1,0 +1,240 @@
+/* 下拉框动画 */
+.select-enter-active {
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.select-leave-active {
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(1, 0.5, 0.8, 1), transform 0.8s cubic-bezier(1, 0.5, 0.8, 1), opacity 0.8s ease;
+}
+
+.select-enter-from {
+  max-height: 0;
+  transform: translateY(-20px); /* 向上位移 */
+  opacity: 0;
+}
+
+.select-enter-to {
+  max-height: 500px; /* 大于内容高度的值 */
+  transform: translateY(0); /* 回到原位 */
+  opacity: 1;
+}
+
+.select-leave-from {
+  max-height: 500px;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.select-leave-to {
+  max-height: 0;
+  transform: translateY(-20px); /* 向上位移 */
+  opacity: 0;
+}
+
+/* 左大屏动画 */
+.screen-left-enter-active {
+  transition: all 0.5s ease;
+  transition-delay: 0.5s; /* 延迟 0.5 秒后开始动画 */
+}
+
+.screen-left-leave-active {
+  transition: all 0.5s ease;
+}
+
+.screen-left-enter-from {
+  transform: scale3d(0.3, 0.3, 0.3);
+  opacity: 0;
+}
+
+.screen-left-enter-to {
+  opacity: 1;
+}
+
+.screen-left-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.screen-left-leave-to {
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+
+/* 右大屏动画 */
+.screen-right-enter-active {
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+.screen-right-leave-active {
+  transition: all 0.5s ease;
+}
+
+.screen-right-enter-from {
+  transform: scale3d(0.3, 0.3, 0.3);
+  opacity: 0;
+}
+
+.screen-right-enter-to {
+  opacity: 1;
+}
+
+.screen-right-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.screen-right-leave-to {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+/* 图例动画 */
+
+/* .legend-enter-active{
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+
+.lengend-leave-active{
+  transition: all 0.5s ease;
+  transition-delay: 2s;
+}
+
+.legend-enter-from{
+  transform: scale3d(0.3, 0.3, 0.3);
+  opacity: 0;
+}
+
+.legend-enter-to{
+  opacity: 1;
+}
+
+.lengend-leave-from{
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.lengend-leave-to{
+  transform: scale3d(0.3, 0.3, 0.3);
+  opacity: 0;
+} */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    opacity: 0
+  }
+
+  10% {
+    transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0.1;
+  }
+
+  20% {
+    transform: scale3d(0.2, 0.2, 0.2);
+    opacity: 0.2;
+  }
+
+  30% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0.3;
+  }
+
+  40% {
+    transform: scale3d(0.4, 0.4, 0.4);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale3d(0.5, 0.5, 0.5);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: scale3d(0.6, 0.6, 0.6);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale3d(0.7, 0.7, 0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: scale3d(0.8, 0.8, 0.8);
+    opacity: 0.8;
+  }
+
+  90% {
+    transform: scale3d(0.9, 0.9, 0.9);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale3d(0.9, 0.9, 0.9);
+    opacity: 0.9;
+  }
+
+  20% {
+    transform: scale3d(0.8, 0.8, 0.8);
+    opacity: 0.8;
+  }
+
+  30% {
+    transform: scale3d(0.7, 0.7, 0.7);
+    opacity: 0.7;
+  }
+
+  40% {
+    transform: scale3d(0.6, 0.6, 0.6);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale3d(0.5, 0.5, 0.5);
+    opacity: 0.5;
+  }
+
+  60% {
+    transform: scale3d(0.4, 0.4, 0.4);
+    opacity: 0.4;
+  }
+
+  70% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0.3;
+  }
+
+  80% {
+    transform: scale3d(0.2, 0.2, 0.2);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale3d(0.1, 0.3, 0.3);
+    opacity: 0;
+  }
+}
+
+.legend-enter-active {
+  animation: bounce-in .2s ease;
+}
+
+.legend-leave-active {
+  animation: bounce-out .2s ease;
+}

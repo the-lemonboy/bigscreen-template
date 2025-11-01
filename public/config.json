@@ -1,0 +1,66 @@
+{
+    "layers": [
+        {
+            "name": "TiandituJiedao",
+            "text": "天地图街道图",
+            "format": "WebTileDataSource",
+            "baseUrl": "http://t0.tianditu.com/vec_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=vec&tileMatrixSet=w&style=default&format=tiles",
+            "formatUrl": "&TileMatrix={0}&TileRow={2}&TileCol={1}&tk=b494f71413b4eee49f7b166ca1a607b4",
+            "minZoom": 0,
+            "maxZoom": 18,
+            "renderOrder": 0.5,
+            "enabled": false
+        },
+        {
+            "name": "TiandituWeixing",
+            "text": "天地图卫星图",
+            "format": "WebTileDataSource",
+            "baseUrl": "http://t0.tianditu.com/img_w/wmts?service=wmts&request=GetTile&version=1.0.0&LAYER=img&tileMatrixSet=w&style=default&format=tiles",
+            "formatUrl": "&TileMatrix={0}&TileRow={2}&TileCol={1}&tk=b494f71413b4eee49f7b166ca1a607b4",
+            "minZoom": 0,
+            "maxZoom": 18,
+            "renderOrder": 0.4,
+            "enabled": true
+        }
+    ],
+    "buildings": [],
+    "w3s": [
+        {
+            "name": "练祁河",
+            "url": "http://localhost:3009/LQH",
+            "active": [
+                "LQH"
+            ],
+            "startDepth": 0,
+            "override": [
+                {
+                    "name": "LQH",
+                    "enabled": true,
+                    "position": {
+                        "height": 180
+                    }
+                }
+            ]
+        }
+    ],
+    "start": {
+        "home": {
+            "longitude": 121.37354105000001,
+            "latitude": 31.421146090000004,
+            "height": 0,
+            "tilt": 40.8,
+            "heading": -38.60,
+            "distance": 1547
+        },
+        "definitions": {
+            "defaultBuildingColor": {
+                "value": "#EDE7E1"
+            }
+        },
+        "defaultFontUrl": "/resources/fonts/Default_FontCatalog.json",
+        "workerScript": "/lib/cimbird2/decoder.bundle.js",
+        "diskCacheEnabled": false,
+        "workerCount": 4,
+        "color": "normal"
+    }
+}

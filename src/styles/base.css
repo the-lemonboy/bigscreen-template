@@ -1,0 +1,22 @@
+body {
+  background:#fff;
+}
+
+@font-face {
+  font-family: ziticqtezhanti;
+  src: url('../assets/fonts/ziticqtezhanti.ttf');
+}
+
+@font-face {
+  font-family: zhenyangb;
+  src: url('../assets/fonts/zhenyangb.ttf');
+}
+
+@font-face {
+  font-family: aliPuHui;
+  src: url('../assets/fonts/AlibabaPuHuiTi-2-95-ExtraBold/AlibabaPuHuiTi-2-95-ExtraBold.ttf')
+}
+
+.size {
+  font-family: zhenyangb;
+}
