@@ -23,11 +23,11 @@ const initMap = () => {
     maxZoom: 19, // 最大缩放级别
   });
 
-  // 使用 OpenStreetMap 标准地图 - 亮蓝色主题，海洋显示为蓝色
-  window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  // 使用深色科技风格的地图瓦片 - CartoDB Dark Matter
+  window.L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '',
     maxZoom: 19,
-    subdomains: ['a', 'b', 'c'],
+    subdomains: 'abcd',
   }).addTo(map);
 
   // 适配窗口大小变化
@@ -85,7 +85,17 @@ onBeforeUnmount(() => {
 :deep(.leaflet-container) {
   height: 100vh;
   width: 100vw;
-  background: #e6f3ff; /* 浅蓝色背景，匹配亮蓝色主题 */
+  background: #0a0e27; /* 深色科技感背景，暗蓝色 */
+}
+
+/* 增强地图的科技感视觉效果 */
+:deep(.leaflet-container) {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* 为地图添加微妙的发光效果，增强科技感 */
+:deep(.leaflet-tile-container) {
+  opacity: 0.95;
 }
 
 /* 确保地图图层全屏 */
