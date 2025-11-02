@@ -19,8 +19,6 @@
 <script setup>
 import { useScreenStateStore } from '@/store/modules/bigscreenState';
 
-import sideRightThree from './screenTwoSideRightThree/index.vue';
-
 const screenStateStore = useScreenStateStore();
 </script>
 <style scoped lang="scss"></style>
