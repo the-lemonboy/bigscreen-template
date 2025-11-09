@@ -8,21 +8,17 @@
           src="../../assets/images/border/big-border.png"
         />
         <div class="flex w-[400px] justify-center">
-          <div class="absolute left-0 z-20 ml-2 w-[96%] ph-top-[20]">
+          <div class="absolute left-0 z-20 ml-2 w-full ph-top-[20]">
             <sideLeftOne></sideLeftOne>
           </div>
-          <div class="absolute left-0 ml-2 w-[96%] ph-top-[500]">
+          <div class="absolute left-0 w-full ph-top-[500]">
             <sideLeftTwo></sideLeftTwo>
           </div>
         </div>
       </div>
     </div>
     <transition name="screen-right">
-      <div v-if="screenStateStore.screenState.screen1" class="relative top-[10px]">
-        <!-- <div
-          class="absolute right-[24px] top-[10.07vh] h-[87.8vh] w-[443px] bg-gradient-to-l from-[rgba(56,56,56,0.9)] to-[rgba(56,56,56,0.3)]"
-        >
-        </div> -->
+      <div v-if="screenStateStore.screenState.screen1" class="relative">
         <div class="absolute right-[24px] ph-top-[120]">
           <sideRightOne></sideRightOne>
         </div>
