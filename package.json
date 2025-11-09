@@ -15,7 +15,7 @@
     "dayjs": "^1.11.19",
     "lodash-es": "^4.17.21",
     "pinia": "^2.2.6",
-    "storejs": "^2.1.0",
+    "swiper": "^12.0.3",
     "vue": "^3.4.29"
   },
   "devDependencies": {
@@ -35,7 +35,6 @@
     "eslint-plugin-vue": "^9.23.0",
     "husky": "^9.1.4",
     "lint-staged": "^15.2.8",
-    "msw": "^2.3.5",
     "postcss": "^8.4.41",
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.0",
@@ -53,11 +52,6 @@
     "tailwindcss-px-to-viewport": "^0.1.3",
     "vite": "^5.3.1",
     "vite-plugin-compression": "^0.5.1"
-  },
-  "msw": {
-    "workerDirectory": [
-      "public"
-    ]
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }

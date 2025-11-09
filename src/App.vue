@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import Main from '@/views/bigscreen/main.vue';
+import Main from '@/views/main.vue';
 </script>
 <style scoped lang="scss">
 #app {

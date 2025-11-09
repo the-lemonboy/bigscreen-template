@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="relative">
-      <img class="" src="../../../assets/images/border/title-border-two.svg" alt="header" />
-      <span class="text-normal absolute left-4 top-1/2 -translate-y-1/2 text-[#75F8FF] ph-text-[18px]">数据</span>
+      <img class="" src="../../assets/images/border/title-border-two.svg" alt="header" />
+      <span class="text-normal absolute left-4 top-1/2 -translate-y-1/2 text-[#75F8FF] ph-text-[18px]">XXXX</span>
     </div>
     <div ref="chartContainerRef" class="flex items-center justify-center ph-mt-[20]" style="height: 37vh; width: 100%">
       <div id="lineChartContainer" class=""></div>
@@ -110,8 +110,8 @@ const data = [
     ],
   },
 ];
-const chart = ref(null);
-
+// const chart = ref(null);
+let chart = null;
 const chartContainerRef = ref(null);
 const lineChartHeight = ref(0);
 const lineChartWidth = ref(0);
@@ -123,11 +123,13 @@ function chartContainer() {
     lineChartWidth.value = chartContainerValue.offsetWidth || chartContainerValue.clientWidth;
   }
 }
+
 function handleResize() {
   window.addEventListener('resize', () => {
     chartContainer();
-    if (chart.value) {
-      chart.value.destroy();
+    if (chart && lineChartHeight.value > 0 && lineChartWidth.value > 0) {
+      chart.destroy();
+      chart = null;
       initChart();
     }
   });
@@ -156,14 +158,23 @@ function handleChartData() {
 }
 const chartData = ref(handleChartData());
 function initChart() {
-  chart.value = new Chart({
+  if (chart) {
+    chart.destroy();
+    chart = null;
+  }
+  const container = document.getElementById('lineChartContainer');
+  if (container) {
+    container.innerHTML = '';
+  }
+
+  chart = new Chart({
     container: 'lineChartContainer',
     height: lineChartHeight.value,
     width: lineChartWidth.value,
     theme: 'classicDark',
     paddingBottom: 60, // 这里
   });
-  chart.value
+  chart
     .interval()
     .data(chartData.value)
     .transform({ type: 'stackY' })
@@ -198,7 +209,7 @@ function initChart() {
       strokeWidth: 1,
       stroke: (d) => d.borderColor,
     });
-  chart.value
+  chart
     .interaction('tooltip', {
       shared: true,
       css: {
@@ -222,7 +233,7 @@ function initChart() {
       },
     })
     .interaction('elementHighlight', { background: true });
-  chart.value.render();
+  chart.render();
 }
 onMounted(async () => {
   await nextTick();
@@ -241,5 +252,9 @@ onMounted(async () => {
 });
 onUnmounted(() => {
   handleResize();
+  if (chart) {
+    chart.destroy();
+    chart = null;
+  }
 });
 </script>

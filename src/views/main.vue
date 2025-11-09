@@ -11,17 +11,14 @@
     <div class="absolute left-0 top-[-20px] z-50">
       <headerZone></headerZone>
     </div>
-    <screenTwo></screenTwo>
     <screenOne></screenOne>
-    <screenThree></screenThree>
   </div>
 </template>
 <script setup>
 import centerContent from './centerContent/index.vue';
 import headerZone from './header/index.vue';
 import screenOne from './screenOne.vue';
-import screenThree from './screenThree.vue';
-import screenTwo from './screenTwo.vue';
+// import screenTwo from './screenTwo.vue';
 </script>
 <style scoped>
 #main-box {
