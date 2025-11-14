@@ -1,9 +1,16 @@
-import { createApp } from 'vue';
+import { createApp } from 'vue'
+import '@/styles/main.css'
+import '@/styles/tailwindcss.css'
+import App from './App.vue'
+import router from '@/router/index.js'
+import { createPinia } from 'pinia'
+import { logger } from '@/utils/index.js'
 
-import '@/styles/main.css';
-import '@/styles/tailwindcss.css';
+const app = createApp(App)
+app.use(createPinia())
+app.use(router)
 
-import App from './App.vue';
-
-const app = createApp(App);
-app.mount('#app');
+app.config.errorHandler = (err, instance, info) => {
+  logger.error('GlobalError', { message: err?.message, info })
+}
+app.mount('#app')

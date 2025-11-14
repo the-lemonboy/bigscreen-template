@@ -1,14 +1,8 @@
 <template>
-  <div id="app">
-    <Main></Main>
+  <div id="app" class="w-full min-h-screen">
+    <router-view></router-view>
   </div>
 </template>
 <script setup>
-import Main from '@/views/main.vue';
 </script>
-<style scoped lang="scss">
-#app {
-  width: 100%;
-  min-height: 100vh;
-}
-</style>
+<style scoped></style>
